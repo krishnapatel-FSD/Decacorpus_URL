@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>DecaCorpus | Build What’s Next.</title>
-    <meta name="description" content="Digital products, software systems and technology built for ambitious businesses." />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital,wght@0,400;1,400&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <meta name="description" content="Digital products, software systems and technology built for ambitious businesses.">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      document.documentElement.classList.add("js");
+      addEventListener("error", function () {
+        document.documentElement.classList.add("fail");
+        document.body && document.body.classList.add("rd");
+      });
+    </script>
   </head>
-  <body class="bg-[#0a0a0a] text-[#f2f0ea] font-sans antialiased overflow-x-clip">
+  <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
