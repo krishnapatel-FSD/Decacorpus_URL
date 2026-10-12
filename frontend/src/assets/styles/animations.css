@@ -1,0 +1,70 @@
+@keyframes pu {
+  50% { scale: 1.5; opacity: .5; }
+}
+
+@keyframes dr {
+  to { translate: -6vw 5vw; }
+}
+
+@keyframes up2 {
+  from { opacity: 0; translate: 0 10px; }
+}
+
+@keyframes fi {
+  from { opacity: 0; translate: 0 24px; }
+}
+
+@keyframes fl {
+  50% { translate: 0 -10px; }
+}
+
+@keyframes wd {
+  from { scale: .82 1; transform-origin: left; }
+}
+
+@keyframes g {
+  from { scale: 1 0; }
+}
+
+@keyframes bz {
+  from { opacity: 0; scale: 1.2; }
+}
+
+@keyframes nv {
+  from { translate: 0 -100px; opacity: 0; }
+}
+
+@keyframes stk {
+  50% { translate: 0 -8px; }
+}
+
+@keyframes rv {
+  from { opacity: 0; translate: 0 var(--ry, 34px); }
+}
+
+@keyframes sw {
+  to { translate: 70% 0; rotate: 6deg; }
+}
+
+@keyframes sc {
+  from { top: 0; }
+  to { top: 100%; }
+}
+
+@keyframes pr {
+  to { width: 100%; }
+}
+
+@keyframes tms {
+  to { background-position: 0 calc(var(--p,0)*600%), 160% 0; }
+}
+
+.rv {
+  opacity: 0;
+}
+
+.rv.vis {
+  opacity: 1;
+  animation: rv var(--du, .9s) cubic-bezier(.2, .7, .1, 1) backwards;
+  animation-delay: var(--dl, 0s);
+}
