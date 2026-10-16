@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { FAQ, P, SI, SL, SLI, SV, TECH } from "../data/content";
+import { FAQ, P, SI, SL, SLI, SV, TECH, WORK } from "../data/content";
 import { Cards, Cta, Dash, Ico, Svc } from "../components/parts";
 import { useStore } from "../lib/store";
 import { $, onScroll, rm, rt } from "../lib/runtime";
@@ -310,6 +310,24 @@ export function Home() {
           <p>From the first interface to the infrastructure beneath it.</p>
           <div className="sv7"><Svc /></div>
           <p style={{ marginTop: 26 }}><a className="b g" href="#/services">Explore services</a></p>
+        </div>
+      </section>
+
+      {/* Unnumbered on purpose, so the section dots and "0N /" numbering stay as they were. */}
+      <section className="sec" id="selwork">
+        <div className="w">
+          <div className="two" style={{ alignItems: "end" }}><div><p className="ey">Selected work</p></div><h2>Recent projects.</h2></div>
+          <div className="wk-g">
+            {WORK.map((p) => (
+              <a key={p.key} className="kc wk-c" data-cur="Open"
+                {...(p.link ? { href: p.link[0], target: "_blank", rel: "noopener" } : { href: "#/work" })}>
+                <figure className="wk-shot"><img src={p.img} alt={p.alt} loading="lazy" style={{ objectPosition: p.pos }} /></figure>
+                <h3>{p.title}</h3>
+                <p>{p.card}</p>
+                <div className="tgs">{p.tags.map((t) => <span key={t}>{t}</span>)}</div>
+              </a>
+            ))}
+          </div>
         </div>
       </section>
 

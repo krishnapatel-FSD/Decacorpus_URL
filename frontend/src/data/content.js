@@ -50,7 +50,37 @@ export const SL = [
   ["AI & Automation", SV[4][1], "ai", "AI assistant helping a person at a laptop", "50% 40%"],
 ];
 
-export const T = { home: "DecaCorpus | Build What’s Next.", services: "Services | DecaCorpus", work: "Healthcare CRM concept | DecaCorpus", studio: "The Studio | DecaCorpus", insights: "Insights | DecaCorpus", careers: "Careers | DecaCorpus", contact: "Contact | DecaCorpus" };
+export const T = { home: "DecaCorpus | Build What’s Next.", services: "Services | DecaCorpus", work: "Work | DecaCorpus", studio: "The Studio | DecaCorpus", insights: "Insights | DecaCorpus", careers: "Careers | DecaCorpus", contact: "Contact | DecaCorpus" };
 export const NM = { home: "Home", services: "Services", work: "Work", studio: "Studio", insights: "Insights", careers: "Careers", contact: "Contact" };
 export const ORD = ["home", "services", "work", "studio", "insights", "careers", "contact"];
 export const href = (k) => (k === "home" ? "#/" : "#/" + k);
+
+/* Work projects shown before the Healthcare CRM concept (Work page and Home).
+   Copy is drawn from the projects' own code bases in /Work. */
+export const WORK = [
+  {
+    key: "haven",
+    eyebrow: "Work / Real estate showcase",
+    title: "Haven",
+    lead: "A walkable 3D residence. The Oak Mansion is presented room by room, with floor plans that open straight into the model and a first-person tour on web, iOS and Android.",
+    tags: ["3D walkthrough", "Floor plans", "iOS & Android"],
+    note: "Illustrative residence • Renders are AI-generated",
+    img: "/assets/images/work/haven.webp",
+    alt: "Haven website hero: The Oak Mansion, a two-storey oak and ivory house at dusk",
+    pos: "0% 50%",
+    card: "Five bedrooms over two floors, presented as a website and a walkable 3D model.",
+  },
+  {
+    key: "terashoes",
+    eyebrow: "Work / 3D commerce",
+    title: "TeraShoes",
+    lead: "A concept store where every product image is a live 3D render. Six colourways, a scroll-told product story and a full bag-and-checkout flow for the Flux 01 trainer.",
+    tags: ["Live 3D product", "E-commerce", "Three.js"],
+    note: "Concept store, no real orders • 3D model © 2021 Shopify, CC BY 4.0",
+    img: "/assets/images/work/terashoes.webp",
+    alt: "TeraShoes store hero: the Flux 01 trainer in amber floating above the brand wordmark",
+    pos: "50% 40%",
+    card: "A concept store built around a live 3D trainer you can recolour and rotate.",
+    link: ["/work/terashoes/index.html", "Explore the store"],
+  },
+];

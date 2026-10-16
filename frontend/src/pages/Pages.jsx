@@ -1,6 +1,6 @@
 // Services, Work, Studio, Insights, Careers and Contact, ported from the prototype's page templates.
 import React, { useEffect, useRef, useState } from "react";
-import { AR, Q, SV } from "../data/content";
+import { AR, Q, SV, WORK } from "../data/content";
 import { Cards, Cta, Dash, Ico, Svc } from "../components/parts";
 import { useStore } from "../lib/store";
 import { $$, rt } from "../lib/runtime";
@@ -42,9 +42,33 @@ export function Services() {
   );
 }
 
+/* A project landing in the same two-column layout as the Healthcare CRM concept. */
+function Project({ p }) {
+  return (
+    <section className="sec pg1 pgw" id={"wk-" + p.key}>
+      <div className="w pgw-g">
+        <div className="pgw-l">
+          <p className="ey">{p.eyebrow}</p>
+          <h1>{p.title}</h1>
+          <p className="lead">{p.lead}</p>
+          <div className="tgs">{p.tags.map((t) => <span key={t}>{t}</span>)}</div>
+          <em className="pgw-n">{p.note}</em>
+          {p.link && (
+            <p className="wk-cta"><a className="b" href={p.link[0]} target="_blank" rel="noopener">{p.link[1]}</a></p>
+          )}
+        </div>
+        <figure className="wk-shot rv">
+          <img src={p.img} alt={p.alt} style={{ objectPosition: p.pos }} />
+        </figure>
+      </div>
+    </section>
+  );
+}
+
 export function Work() {
   return (
     <>
+      {WORK.map((p) => <Project key={p.key} p={p} />)}
       <section className="sec pg1 pgw">
         <div className="w pgw-g">
           <div className="pgw-l">

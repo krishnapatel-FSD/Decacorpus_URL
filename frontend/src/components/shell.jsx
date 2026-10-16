@@ -190,7 +190,7 @@ export function Nav() {
 }
 
 /* Menu overlay */
-const MENU = [["home", "00"], ["work", "01", 1], ["services", "02", 7], ["studio", "03"], ["insights", "04", 2], ["careers", "05"], ["contact", "06"]];
+const MENU = [["home", "00"], ["work", "01", 3], ["services", "02", 7], ["studio", "03"], ["insights", "04", 2], ["careers", "05"], ["contact", "06"]];
 export function Menu() {
   const { menuOn, mClose } = useStore();
   const on = menuOn ? " on" : "";
